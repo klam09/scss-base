@@ -1,0 +1,5 @@
+{
+    "extends": [
+        "./node_modules/@klam09/lint-config/eslint.js"
+    ]
+}

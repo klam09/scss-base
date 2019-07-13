@@ -1,0 +1,54 @@
+html {
+    font-size: 16px;
+    line-height: 1;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+@for $i from 1 through 5 {
+    %margin0 {
+        margin: 0;
+    }
+
+    h#{$i} {
+        @extend %margin0;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+button {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+sup {
+    // TODO
+}
+
+sub {
+    // TODO
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:visited {
+        color: inherit;
+    }
+}

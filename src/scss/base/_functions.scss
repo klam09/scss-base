@@ -1,0 +1,19 @@
+@function get-color($colorName, $colors: $colors) {
+    @return map-get($colors, $colorName);
+}
+
+@function breakpoint-width($breakpoint, $breakpoints: $breakpoints) {
+    @return #{map-get($breakpoints, $breakpoint)}px;
+}
+
+@function next-breakpoint-width($breakpoint, $breakpoints: $breakpoints) {
+    @if (index($breakpoints, $breakpoint) + 1 > length($breakpoints)) {
+        @return none;
+    } @else {
+        $next-breakpoint: nth($breakpoints, index($breakpoints, $breakpoint) + 1);
+
+        @return #{map-get($breakpoints, $next-breakpoint) - .01}px;
+    }
+}
+
+

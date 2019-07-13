@@ -1,0 +1,49 @@
+@mixin media-breakpoint-up($breakpoint) {
+    @media screen and (min-width: breakpoint-width($breakpoint)) {
+        @content;
+    }
+}
+
+@mixin media-breakpoint-only($breakpoint, $breakpoints: $breakpoints) {
+    @if index($breakpoints, $breakpoint) == length($breakpoints) {
+        @include media-breakpoint-up($breakpoint) {
+            @content;
+        }
+    } @else {
+        @media screen and (min-width: breakpoint-width($breakpoint) and (max-width: next-breakpoint-width($breakpoint))) {
+            @content;
+        }
+    }
+}
+
+@mixin responsive-attr($attr, $value) {
+    @if (type_of($value) == list) {
+        @for $i from 1 through length($value) {
+            @if length($breakpoints) >= $i {
+                $breakpoint: nth(map-keys($breakpoints), $i);
+
+                @include media-breakpoint-up($breakpoint) {
+                    #{$attr}: nth($value, $i);
+                }
+            }
+        }
+    } @else {
+        #{$attr}: $value;
+    }
+}
+
+@mixin responsive-img($display: inline-block) {
+    img {
+        display: none;
+
+        @for $i from 1 through length(map-keys($breakpoints)) {
+            $breakpoint: nth(map-keys($breakpoints), $i);
+
+            @include media-breakpoint-up($breakpoint) {
+                &.img-#{$breakpoint} {
+                    display: $display;
+                }
+            }
+        }
+    }
+}
