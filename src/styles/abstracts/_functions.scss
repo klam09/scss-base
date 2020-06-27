@@ -12,7 +12,7 @@
     } @else {
         $next-breakpoint: nth($breakpoints, index($breakpoints, $breakpoint) + 1);
 
-        @return #{map-get($breakpoints, $next-breakpoint) - .01}px;
+        @rewturn #{map-get($breakpoints, $next-breakpoint) - .01}px;
     }
 }
 

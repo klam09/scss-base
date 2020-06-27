@@ -1,0 +1,97 @@
+// lang
+$languages: (
+    en: ('en'),
+    tc: ('zh-Hant'),
+    sc: ('zh-Hans')
+) !default;
+$default-lang: en !default;
+
+// color
+$colors: (
+    white: #fff,
+    black: #333
+) !default;
+
+// Transition
+$transition-duration: 0s !default;
+$transition-timing-function: ease !default;
+
+// Responsive
+$breakpoints: (
+    sm: 0,
+    md: 768,
+    lg: 1200
+) !default;
+
+$container-widths: (
+    sm: 480px,
+    lg: 720px
+) !default;
+
+$glutters: (
+    sm: 16px,
+    lg: 24px
+) !default;
+
+$grid-columns: (
+    sm: 4,
+    lg: 8
+) !default;
+
+$typefaces: (
+    h1: (
+        weight: 500,
+        size: 40px,
+        lineHeight: 1.2
+    ),
+    h2: (
+        weight: 500,
+        size: 40px,
+        lineHeight: 1.188
+    ),
+    h3: (
+        weight: 500,
+        size: 28px,
+        lineHeight: 1.214
+    ),
+    h4: (
+        weight: 500,
+        size: 24px,
+        lineHeight: 1.209
+    ),
+    body1: (
+        size: 20px,
+        lineHeight: 1.2
+    ),
+    body2: (
+        size: 18px,
+        lineHeight: 1.167
+    ),
+    body3: (
+        size: 16px,
+        lineHeight: 1.188
+    ),
+    body4: (
+        size: 14px,
+        lineHeight: 1.143
+    ),
+    caption1: (
+        weight: 500,
+        size: 12px,
+        lineHeight: 1.167
+    ),
+    caption2: (
+        weight: 400,
+        size: 12px,
+        lineHeight: 1.167
+    ),
+    link: (
+        weight: 500,
+        size: 14px,
+        lineHeight: 1.143
+    ),
+    button: (
+        size: 18px,
+        lineHeight: 1.223
+    )
+) !default;

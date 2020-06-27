@@ -1,0 +1,78 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.2;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+@for $i from 1 through 5 {
+    %margin0 {
+        margin: 0;
+    }
+
+    h#{$i} {
+        @extend %margin0;
+    }
+}
+
+p {
+    margin: 0;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+sup {
+    top: -.5em;
+}
+
+b,
+strong {
+    font-weight: 700;
+}
+
+button,
+input {
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    text-decoration: underline;
+
+    &:visited {
+        color: inherit;
+    }
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 0;
+}

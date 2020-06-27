@@ -1,10 +1,11 @@
-@import './mixins/animation';
+ww@import './mixins/animation';
 @import './mixins/background';
+@import './mixins/breakpoint';
 @import './mixins/box';
-@import './mixins/devices';
 @import './mixins/display';
+@import './mixins/grid';
 @import './mixins/lang';
 @import './mixins/position';
 @import './mixins/pseudo';
-@import './mixins/responsive';
 @import './mixins/transition';
+@import './mixins/typography';
